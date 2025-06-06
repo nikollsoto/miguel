@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diálogo IA</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body class="tema-claro">
+      <img src="https://i.makeagif.com/media/2-21-2016/LLQqOO.gif" class="fondo">
+    
+    <div class="contenedor-principal">
+        <header class="encabezado">
+            <h1><strong>¿Qué sentido tiene la vida?</strong></h1>
+            <p><strong>Filósofo Existencialista vs. Monje Budista</strong></p>
+        </header>
+
+        <div class="zona-chat" id="zona-chat">
+            <!-- Aquí irán los mensajes en divs -->
+        </div>
+
+        <div class="botonera">
+            <button id="boton-filosofo" class="estilo-filosofo">🗣️ Filósofo Existencialista</button>
+            <button id="boton-budista" class="estilo-budista">🧘 Monje Budista</button>
+            <button id="boton-limpiar" class="estilo-limpiar">♻️ Limpiar</button>
+            <button id="boton-exportar" class="estilo-exportar">📄 PDF</button>
+        </div>
+    </div>
+
+    <!-- Modal de edición -->
+    <div id="modal-edicion" class="ventana-modal">
+        <div class="contenido-modal">
+            <span class="cerrar-modal">&times;</span>
+            <h3>Editar Mensaje</h3>
+            <textarea id="texto-edicion"></textarea>
+            <button id="guardar-edicion" class="boton-guardar">Guardar 💾</button>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+
+</html>

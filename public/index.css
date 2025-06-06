@@ -1,0 +1,196 @@
+
+:root {
+    --color-filosofo: #7dff46;
+    --color-budista: #ada7ff;
+    --accent-green: #e0b8b8;
+    --neutral-grey: #adadad;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.fondo { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+}
+
+
+
+
+span{
+    
+    color:rgba(0, 0, 0, 0.9) ;
+}
+.contenedor-principal {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background: rgba(253, 253, 253, 0.363);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+.zona-chat {
+    height: 60vh;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 16px;
+    background: #fafafac7;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.03);
+    margin-bottom: 20px;
+}
+
+.mensaje {
+    max-width: 75%;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    border-radius: 20px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mensaje.filosofo {
+    background: var(--color-filosofo);
+    color: var(--text-light);
+    margin-right: auto;
+    border-bottom-left-radius: 6px;
+}
+
+.mensaje.budista {
+    background: var(--color-budista);
+    color: var(--text-light);
+    margin-left: auto;
+    border-bottom-right-radius: 6px;
+}
+
+.mensaje:hover .acciones-mensaje {
+    display: flex;
+}
+
+.acciones-mensaje {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: -15px;
+    background: white;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.botonera {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.botonera button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.botonera button:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.estilo-filosofo {
+    background: var(--color-filosofo);
+    color: var(--text-light);
+}
+
+.estilo-budista {
+    background: var(--color-budista);
+    color: var(--text-light);
+}
+
+.estilo-limpiar {
+    background: var(--neutral-grey);
+    color: white;
+}
+
+.estilo-exportar {
+    background: var(--accent-green);
+    color: var(--text-dark);
+}
+
+/* Modal */
+.ventana-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-modal {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    width: 85%;
+    max-width: 480px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cerrar-modal {
+    float: right;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-dark);
+}
+
+#texto-edicion {
+    width: 100%;
+    height: 100px;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: #fefefe;
+    color: var(--text-dark);
+    font-family: 'Nunito', sans-serif;
+}
+
+.boton-guardar {
+    padding: 10px 18px;
+    background: var(--color-filosofo);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
